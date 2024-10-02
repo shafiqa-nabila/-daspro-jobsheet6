@@ -10,7 +10,7 @@ public class Pemilihan2Percobaan220 {
         String member;
         double diskon;
         double harga;
-        double totalHarga;
+        double totalHarga=0;
 
         System.out.println("----------------------");
         System.out.println("====MENU KAFE JTI=====");
@@ -44,11 +44,8 @@ public class Pemilihan2Percobaan220 {
             }
             totalHarga = harga - (harga * diskon);
             System.out.println("Total bayar setelah diskon = " + totalHarga);
-            System.out.println("Total bayar = " + harga);
 
         }else if (member.equalsIgnoreCase("n")) {
-                diskon = 0.10;
-                System.out.println("Besar diskon = 10%");
                 if (menu == 1) {
                     harga = 14000;
                     System.out.println("Harga ricebowl = " + harga);
@@ -62,13 +59,21 @@ public class Pemilihan2Percobaan220 {
                     System.out.println("Masukkan pilihan menu dengan benar");
                     return;
                 }
-                totalHarga = harga - (harga * diskon);
-                System.out.println("Total bayar setelah diskon = " + totalHarga);
+                totalHarga = harga ;
                 System.out.println("Total bayar = " + harga);
     
             } else {
             System.out.println("Member tidak valid");
         }
+
+        System.out.println("Apakah anda membayar menggunakan qris: ");
+        String qris = input20.nextLine();
+        if (qris.equalsIgnoreCase("ya")) {
+            totalHarga = totalHarga - 1000;
+            System.out.println("Pembayaran menggunakan qris: " + totalHarga);
+        }
+
+
         System.out.println("----------------------------------");
     }
 }
