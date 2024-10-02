@@ -10,6 +10,7 @@ public class Pemilihan2Percobaan220 {
         String member;
         double diskon;
         double harga;
+        double totalHarga;
 
         System.out.println("----------------------");
         System.out.println("====MENU KAFE JTI=====");
@@ -41,9 +42,31 @@ public class Pemilihan2Percobaan220 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return;
             }
+            totalHarga = harga - (harga * diskon);
+            System.out.println("Total bayar setelah diskon = " + totalHarga);
             System.out.println("Total bayar = " + harga);
 
-        } else {
+        }else if (member.equalsIgnoreCase("n")) {
+                diskon = 0.10;
+                System.out.println("Besar diskon = 10%");
+                if (menu == 1) {
+                    harga = 14000;
+                    System.out.println("Harga ricebowl = " + harga);
+                } else if (menu == 2){
+                    harga = 3000;
+                    System.out.println("Harga ice tea = " + harga);
+                } else if (menu == 3){
+                    harga = 15000;
+                    System.out.println("Harga bundling = " + harga);
+                } else {
+                    System.out.println("Masukkan pilihan menu dengan benar");
+                    return;
+                }
+                totalHarga = harga - (harga * diskon);
+                System.out.println("Total bayar setelah diskon = " + totalHarga);
+                System.out.println("Total bayar = " + harga);
+    
+            } else {
             System.out.println("Member tidak valid");
         }
         System.out.println("----------------------------------");
